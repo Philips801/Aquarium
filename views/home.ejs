@@ -1,0 +1,13 @@
+<%- include("partials/header", { title: "Home Page - Shops World" }) %>
+<%- include("partials/navigation") %>
+
+<% if (shops.length > 0) { %>
+    <% shops.forEach(shop => { %>
+        <p><%= shop.name %></p>
+        <p><%= shop.area %></p>
+        <p><%= shop.description %></p>
+        <hr>
+    <% }) %>
+<% } else { %>
+    <p>No Shops yet.</p>
+<% } %>
